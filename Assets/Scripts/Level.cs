@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour
 {
     // parameters
     [SerializeField] int breakableBlocks; // Serialized for debugging purposes
 
     // cached reference
-    SceneLoader sceneloader;
+    //SceneLoader sceneloader;
 
     private void Start()
     {
-        sceneloader = FindObjectOfType<SceneLoader>();
+        //sceneloader = FindObjectOfType<SceneLoader>();
     }
 
     public void CountBlocks()
@@ -24,7 +24,14 @@ public class Level : MonoBehaviour
         breakableBlocks--;
         if(breakableBlocks<=0)
         {
-            sceneloader.LoadNextScene();
+           
+            var s = SceneManager.GetActiveScene().buildIndex;
+            Debug.Log(s);
+            LevelManager.levelCom[s-2] = true;
+            PlayerPrefs.SetInt("Level" + (s-2).ToString(), 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(s + 1);
+
         }
     }
 

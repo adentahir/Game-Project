@@ -883,6 +883,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 171656940924532967, guid: d2b88a7dae1db854abdac94c39df3245, type: 3}
+      propertyPath: breakableBlocks
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4473246818151918621, guid: d2b88a7dae1db854abdac94c39df3245, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1043,6 +1047,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986069845770178430, guid: 2010673d0285e8a47b647d37b445311a, type: 3}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 986069845770178430, guid: 2010673d0285e8a47b647d37b445311a, type: 3}
+      propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 986069845770178430, guid: 2010673d0285e8a47b647d37b445311a, type: 3}
